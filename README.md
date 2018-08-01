@@ -1,7 +1,7 @@
-# Django, WSGI and `nginx` stack
+# `django`, WSGI and `nginx` stack
 
 * Two distinct components that makes up the _web server_, so it decouples the application from the web server: uWSGI and `nginx`.
-  * Because web servers cannot talk directly to Django. Instead requires a WSGI interface.
+  * Because web servers cannot talk directly to `django`. Instead requires a WSGI interface.
   * uWSGI acts as and _application server_.
   * `nginx` handles and forwards the HTTP requests.
 * Ease of _partinioning_ between development and production environment.
@@ -12,7 +12,7 @@
   * https://uwsgi-docs.readthedocs.io/en/latest/PHP.html
 * Concept
 ```shell
-web client <-> web server <-> tcp socket <-> uwsgi <-> Django
+web client <-> web server <-> tcp socket <-> uwsgi <-> django
 ```
 * Running the code in the development environment.
   * Multiple developers will have access to a pool of high-numbered TCP ports.
@@ -20,3 +20,14 @@ web client <-> web server <-> tcp socket <-> uwsgi <-> Django
   * Developers run and test their application in `virtualenv` sandboxes. `pip` is used to install required libraries into the sandboxed virtual environments without poluting the libraries on the host box.
 * Running the code in the production environment.
   * Only ports 80 and 443 are available.
+  * Run in virtual environment?
+  * Development to production deployment workflow?
+* Upgrading `nginx`.
+  * Workflow?
+  * Rollback or backout procedure?
+* Upgrading `django`
+  * Workflow?
+  * Rollback or backout procedure?
+* Upgrading `uwsgi`.
+  * Workflow?
+  * Rollback or backout procedure?
