@@ -1,4 +1,4 @@
-# WSGI and `nginx` stack
+# Django, WSGI and `nginx` stack
 
 * Two distinct components that makes up the _web server_: uWSGI and `nginx`.
   * uWSGI acts as and _application server_.
@@ -9,3 +9,7 @@
 * Perl and PHP language support is done via uWSGI plugin implementations.
   * https://uwsgi-docs.readthedocs.io/en/latest/Perl.html
   * https://uwsgi-docs.readthedocs.io/en/latest/PHP.html
+* Concept
+```shell
+web client <-> web server <-> tcp socket <-> uwsgi <-> Django
+```
