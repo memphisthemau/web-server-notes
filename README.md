@@ -1,6 +1,6 @@
 # Django, WSGI and `nginx` stack
 
-* Two distinct components that makes up the _web server_: uWSGI and `nginx`.
+* Two distinct components that makes up the _web server_, so it decouples the application from the web server: uWSGI and `nginx`.
   * uWSGI acts as and _application server_.
   * `nginx` handles and forwards the HTTP requests.
 * Ease of _partinioning_ between development and production environment.
