@@ -14,3 +14,9 @@
 ```shell
 web client <-> web server <-> tcp socket <-> uwsgi <-> Django
 ```
+* Running the code in the development environment.
+  * Multiple developers will have access to a pool of high-numbered TCP ports.
+  * The pool of high-numbered ports are assigned to the developers.
+  * Developers run and test their application in `virtualenv` sandboxes. `pip` is used to install required libraries into the sandboxed virtual environments without poluting the libraries on the host box.
+* Running the code in the production environment.
+  * Only ports 80 and 443 are available.
