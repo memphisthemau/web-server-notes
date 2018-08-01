@@ -1,4 +1,4 @@
-# WSGI and `nginx`
+# WSGI and `nginx` stack
 
 * Two distinct components that makes up the _web server_: uWSGI and `nginx`.
   * uWSGI acts as and _application server_.
